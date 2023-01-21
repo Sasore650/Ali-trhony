@@ -148,3 +148,35 @@ def clear():
 
     print(logo)
     
+  
+  logo = """
+
+\t\x1b[1;97m       ########### 
+
+\t\x1b[1;92m            #
+
+\t\x1b[1;97m            #       
+
+\t\x1b[1;92m            #
+
+\t\x1b[1;97m            #
+
+\t\x1b[1;92m            #
+
+\t\x1b[1;97m            #
+
+
+
+  AUTHOR   :   SILENT HACKER
+
+  FACEBOOK :   Al altrhony
+
+  GITHUB    :   sasore650
+
+  LIFE STATUS  :   TR 
+
+  FB GROUP  : Facebook 
+
+  TOOL STATUS :  FREE                             
+
+\033[1;91m=========================================================="""
