@@ -180,3 +180,138 @@ def clear():
   TOOL STATUS :  FREE                             
 
 \033[1;91m=========================================================="""
+
+
+
+
+
+
+def linex():
+
+    print(f'{GREEN}==========================================================')
+
+def checks(oks,cps,twf):
+
+    if not len(oks) != 0:
+
+        pass
+
+    if len(cps) != 0:
+
+        print('\n\n\x1b[1;97m TOTAL OK : \x1b[1;97m %s  \x1b[1;97mALONE-OK.txt' % (
+
+            H, P, str(len(oks))))
+
+        print('\x1b[1;97m TOTAL CP :\x1b[1;97m   %s \x1b[1;97mALONE-CP.txt' %
+
+              (H, P, str(len(cps))))
+
+        print('\x1b[1;97m TOTAL 2F :\x1b[1;97m   %s \x1b[1;97mALONE-2F.txt' %
+
+              (H, P, str(len(twf))))
+
+        input("\x1b[1;97mPRESE ENTER TO BACK xyz  ")
+
+        xyz()
+
+loop = 0
+
+cps = []
+
+oks = []
+
+twf = []
+
+def cek_apk(session,coki):
+
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+
+    sop = BeautifulSoup(w,"html.parser")
+
+    x = sop.find("form",method="post")
+
+    game = [i.text for i in x.find_all("h3")]
+
+    if len(game)==0:
+
+        print(f'\r %s[%s!%s] %s{ORANGE}SORRY THERE IS NO ACTIVE  APKS 🎮%s  '%(ORANGE))
+
+    else:
+
+        print(f'\r {GREEN}[√] %sYOUR ACTIVE APPLICATION DETAILS :'%(GREEN))
+
+        for i in range(len(game)):
+
+            print(f"\r%s[%s] %s %s "%(N,i+1,game[i]. replace("Ditambahkan pada"," Ditambahkan pada"),N))
+
+        #else:
+
+            #print(f'\r %s[%s!%s] Sorry, Apk check failed invalid cookie'%(N,M,N))
+
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+
+    sop = BeautifulSoup(w,"html.parser")
+
+    x = sop.find("form",method="post")
+
+    game = [i.text for i in x.find_all("h3")]
+
+    if len(game)==0:
+
+        print(f'\r %s[%s!%s] %s{ORANGE}SORRY THERE IS NO EXPIRED APKS 🎮%s'%(ORANGE))
+
+    else:
+
+        print(f'\r 🎮  %{RED}sYOUR EXPIRED APKS DETAILS :'%(RED))
+
+        for i in range(len(game)):
+
+            print(f"\r%s[%s] %s %s "%(N,i+1,game[i]. replace("Kedaluwarsa"," Kedaluwarsa"),N))
+
+            print(f"{GREEN}[√]---------------------------------------------------[√]")
+
+    #____________#
+
+def xyz():
+
+    os.system("play-audio WELCOME_TO_HAMI_BOOT_818.mp3")
+
+    os.getuid
+
+    os.system("clear");print(logo)
+
+    print('           \x1b[97m[\033[37;41m  M A I N   M E N U   \033[0;m] ')
+
+    print(f"")
+
+    print(f"{BLUE}[01] {GREEN}RANDOM CLONE PAK  M1")
+
+    print(f"{BLUE}[00] {GREEN}EXIT PROGRAM ")
+
+    print(f"")
+
+    print(f"\033[1;91m========================================================")
+
+    LUQMAN = input("[√] CHOOSE : ")
+
+    if LUQMAN in ["1","01"]:
+
+        Tabii()
+
+    elif LUQMAN in ["0","00"]:
+
+       exit()
+
+    else:
+
+        print('\033[1;31mINCORECT OPTION!\033[1;31m')
+
+        xyz()
+
+#_____________#
+
+ 
+
+#_____________________#
+
+
